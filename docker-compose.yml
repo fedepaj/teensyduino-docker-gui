@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  teensyduino:
+    image: teensyduino:latest
+    build: .
+    environment:
+      - DISPLAY=${DISPLAY}
+      - TOKEN=${TOKEN}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./sketches:/sketches/ # Change this line to have a comunicating folder where you want
+    network_mode: host
+    privileged: true # It could be also deprivileged but you must a devices section with the specific port of the teensy
