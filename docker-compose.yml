@@ -9,6 +9,6 @@ services:
       - TOKEN=${TOKEN}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - ./sketches:/sketches/ # Change this line to have a comunicating folder where you want
+      - $HOME/tensyduino/sketches:/sketches/ # Change this line to have a comunicating folder where you want
     network_mode: host
     privileged: true # It could be also deprivileged but you must a devices section with the specific port of the teensy
