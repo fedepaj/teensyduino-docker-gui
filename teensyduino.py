@@ -4,10 +4,6 @@ import os
 import logging as log
 import sys
 
-# Check if docker is installed
-# Check if docker-compose is installed
-# Write docker files in /tmp dir or similar
-# cd in that dir
 # Get the used display number
 try:
     display = os.environ['DISPLAY']
@@ -38,3 +34,4 @@ docker.compose.build()
 docker.compose.config()
 
 docker.compose.up(["teensyduino"])
+
